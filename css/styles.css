@@ -9,14 +9,14 @@ body {
     height: 696px;
     background: #fff;
     display: flex;
-    justify-content: center; /* Центруємо контейнер по горизонталі */
-    align-items: center; /* Центруємо контейнер по вертикалі */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .gallery-container {
-    display: flex; /* Використовуємо flex для горизонтального розташування секцій */
-    flex-direction: column; /* Вертикальне вирівнювання секцій */
-    align-items: center; /* Центруємо секції по горизонталі */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .section1,
@@ -24,9 +24,9 @@ body {
 .section3 {
     width: 1128px;
     height: 200px;
-    display: flex; /* Використовуємо flex для горизонтального розташування зображень */
-    justify-content: space-between; /* Вирівнюємо зображення з відстанню між ними */
-    margin-bottom: 20px; /* Відступ між секціями */
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 20px; 
 }
 
 .section1 img,
@@ -34,15 +34,14 @@ body {
 .section3 img {
     width: 360px;
     height: 200px;
-    object-fit: cover; /* Зберігаємо пропорції зображення */
-    border-radius: 8px; /* Закруглені кути для зображень */
-    transition: transform 0.2s; /* Додаємо анімацію при наведені */
-}
+    object-fit: cover; 
+    border-radius: 8px; 
+    transition: transform 0.2s; 
 
 .section1 img:hover,
 .section2 img:hover,
 .section3 img:hover {
-    transform: scale(1.05); /* Збільшення зображення при наведенні */
+    transform: scale(1.05);
 }
 
 .modal {
@@ -79,4 +78,5 @@ body {
     text-align: center;
     margin-top: 15px;
     font-size: 18px;
+}
 }

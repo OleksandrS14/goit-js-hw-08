@@ -47,17 +47,15 @@ const images = [
     },
 ];
 
-// Додавання зображень до секцій
 const sections = [document.querySelector('.section1'), document.querySelector('.section2'), document.querySelector('.section3')];
 
 images.forEach((image, index) => {
     const link = document.createElement('a');
-    link.href = image.original; // Посилання на велике зображення
-    link.setAttribute('data-source', image.original); // Зберігаємо велике зображення в data-атрибуті
+    link.href = image.original;
+    link.setAttribute('data-source', image.original); 
     link.addEventListener('click', (event) => {
-        event.preventDefault(); // Забороняємо стандартну поведінку посилання
-        console.log(image.original); // Виводимо посилання на велике зображення в консоль
-        // Відкриваємо модальне вікно
+        event.preventDefault(); 
+        console.log(image.original);
         basicLightbox.create(`
             <img src="${image.original}" alt="${image.description}" />
         `).show();
