@@ -37,11 +37,12 @@ body {
     object-fit: cover; 
     border-radius: 8px; 
     transition: transform 0.2s; 
+}
 
 .section1 img:hover,
 .section2 img:hover,
 .section3 img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); 
 }
 
 .modal {
@@ -78,5 +79,4 @@ body {
     text-align: center;
     margin-top: 15px;
     font-size: 18px;
-}
 }

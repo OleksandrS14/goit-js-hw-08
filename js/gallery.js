@@ -47,15 +47,16 @@ const images = [
     },
 ];
 
+
 const sections = [document.querySelector('.section1'), document.querySelector('.section2'), document.querySelector('.section3')];
 
 images.forEach((image, index) => {
     const link = document.createElement('a');
-    link.href = image.original;
+    link.href = image.original; 
     link.setAttribute('data-source', image.original); 
     link.addEventListener('click', (event) => {
         event.preventDefault(); 
-        console.log(image.original);
+        console.log(image.original); 
         basicLightbox.create(`
             <img src="${image.original}" alt="${image.description}" />
         `).show();
