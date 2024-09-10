@@ -47,25 +47,39 @@ const images = [
     },
 ];
 
-
-const sections = [document.querySelector('.section1'), document.querySelector('.section2'), document.querySelector('.section3')];
+const sections = [
+    document.querySelector('.section1'),
+    document.querySelector('.section2'),
+    document.querySelector('.section3')
+];
 
 images.forEach((image, index) => {
+    const li = document.createElement('li');
+
     const link = document.createElement('a');
-    link.href = image.original; 
-    link.setAttribute('data-source', image.original); 
+    link.href = image.original;
+    link.setAttribute('data-source', image.original);
     link.addEventListener('click', (event) => {
-        event.preventDefault(); 
-        console.log(image.original); 
+        event.preventDefault();
+
         basicLightbox.create(`
             <img src="${image.original}" alt="${image.description}" />
         `).show();
     });
-
+    
     const img = document.createElement('img');
     img.src = image.preview;
     img.alt = image.description;
-
+   
     link.appendChild(img);
-    sections[Math.floor(index / 3)].appendChild(link);
+   
+    li.appendChild(link);
+   
+    if (index < 3) {
+        sections[0].appendChild(li);
+    } else if (index >= 3 && index < 6) {
+        sections[1].appendChild(li);
+    } else {
+        sections[2].appendChild(li);
+    }
 });
